@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const UserModal = new mongoose.Schema({
+const UserModel = new mongoose.Schema({
   name: {
     type: String,
     trim: true,
@@ -21,3 +21,5 @@ const UserModal = new mongoose.Schema({
     default: Date.now(),
   },
 });
+
+module.exports = mongoose.model("users", UserModel);
